@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="preconnect" href="http://fonts.gastatic.com">
+    <link href="http://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./exercise.css" />
+
+    <style>
+        body {
+            color: rgba(26, 26, 26, .7);
+            font-family: 'Lora', serif;
+            margin: 0;
+        }
+
+        header {
+            color: white;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./Materials/header.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 600px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            font-size: 14px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #logo {
+            font-size: 40px;
+        }
+
+        .button,
+        #details h1,
+        footer address,
+        header h1 strong,
+        #links {
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        #links a {
+            margin: 15px;
+        }
+
+        a {
+            cursor: pointer;
+        }
+
+        a.button {
+            padding: 10px 15px;
+            border: 2px solid white;
+            border-radius: 100px;
+        }
+
+        header h1 {
+            font-weight: normal;
+            text-align: center;
+            z-index: 1;
+        }
+
+        header h1 em {
+            font-size: 20px;
+            letter-spacing: 1px;
+        }
+
+        header h1 strong {
+            font-size: 70px;
+            font-weight: bold;
+            letter-spacing: 4px;
+        }
+
+        h1 a.button {
+            font-size: 20px;
+            border: 0;
+            background-color: rgb(54, 179, 168);
+        }
+
+        .container {
+            margin: auto;
+        }
+
+        section {
+            margin: 100px 125px;
+            text-align: center;
+        }
+
+        #main h1 {
+            font-size: 28px;
+            font-weight: normal;
+            color: rgba(26, 26, 26, .9);
+        }
+
+        #main p {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 125px;
+            width: 60%;
+        }
+
+        #details {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #details h1 {
+            color: rgb(61, 153, 145);
+            font-weight: normal;
+            letter-spacing: 2px;
+        }
+
+        p {
+            line-height: 36px;
+            margin: auto;
+        }
+
+        #details div {
+            width: calc((100% - 40px) / 2);
+        }
+
+        #details img {
+            width: 100%;
+        }
+
+        footer {
+            background-color: rgb(31, 31, 31);
+            color: rgba(255, 255, 255, .8);
+            padding: 75px;
+            text-align: center;
+        }
+
+        footer p {
+            color: rgba(255, 255, 255, .4);
+            margin-top: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="logo">
+                CS 193x
+            </div>
+            <div id="links">
+                <a>Home</a>
+                <a>About</a>
+                <a>News</a>
+                <a>Read Me</a>
+                <a class="button">Take Action</a>
+            </div>
+        </nav>
+
+        <h1>
+            <em>Sustainability</em><br />
+            <strong>Starts With You</strong><br /><br /><br />
+            <a class="button">Learn More</a>
+        </h1>
+
+    </header>
+    <div class="container">
+        <section>
+            <div id="main">
+                <h1>We conserve land through outreach, restoration, and research.</h1>
+                <p>
+                    Some of the Earth's greatest landscapes are threatened by increased road construction, oil and gas
+                    exploration, and mining. We aim to protect these areas from inappropriate development, but we cannot
+                    achieve our goals alone. Find out how you can help.
+                </p>
+            </div>
+
+            <div id="details">
+                <div>
+                    <img src="Materials/body-image-1.jpg" />
+                    <h1>About</h1>
+                    <p>
+                        Find out about our organization, mission, our methods, and the results of our decades of
+                        advocacy.
+                    </p>
+                </div>
+                <div>
+                    <img src="Materials/body-image-2.jpg" />
+                    <h1>Take Action</h1>
+                    <p>
+                        Ready to take the next step? You can become a contributor to our cause, or participate yourself.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+        <footer>
+            <address>CS193X, Shriram Center 104 </address>
+            <p>Powered by competence</p>
+        </footer>
+    </div>
+</body>
+
+</html>
