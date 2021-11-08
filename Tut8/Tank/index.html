@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <img id="tank" src="tank.png" style="position: relative; top: 0px; left: 0px;" width="50" height="50" />
+
+    <div class="container">
+        <canvas id="field" width="800" height="600" style="border: 3px solid #000000"></canvas> 
+        <button onclick="init()">START</button>
+        <button onclick="moveUp()">UP</button>
+        <button onclick="moveDown()">DOWN</button>
+        <button onclick="moveLeft()">LEFT</button>
+        <button onclick="moveRight()">RIGHT</button>
+    </div>
+
+    <script>
+        let field = document.getElementById("field");
+        let tank = document.getElementById("tank");
+        let step = 50;
+
+        function init() {
+            tank = document.getElementById('tank');
+            tank.style.position = 'relative';
+            tank.style.left = '350px';
+            tank.style.top = '300px';
+        }
+
+        function moveUp() {
+            if (parseInt(tank.style.top) <= 50 ) {
+                tank.style.top = parseInt(tank.style.top) + 'px';
+            }
+            else {
+            tank.style.top = parseInt(tank.style.top) - step + 'px';
+            }
+        }
+
+        function moveDown() {
+            if (parseInt(tank.style.top) >= 600 ) {
+                tank.style.top = parseInt(tank.style.top) + 'px';
+            }
+            else {
+            tank.style.top = parseInt(tank.style.top) + step + 'px';
+            }
+        }
+
+        function moveRight() {
+            if (parseInt(tank.style.left) >= 750 ) {
+                tank.style.left = parseInt(tank.style.left) + 'px';
+            }
+            else {
+            tank.style.left = parseInt(tank.style.left) + step + 'px';
+            }
+        }
+
+        function moveLeft() {
+            if (parseInt(tank.style.left) <= 0 ) {
+                tank.style.left = parseInt(tank.style.left) + 'px';
+            }
+            else {
+            tank.style.left = parseInt(tank.style.left) - step + 'px';
+        }
+    }
+
+    </script>
+</body>
+
+</html>

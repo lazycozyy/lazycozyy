@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    select, #amount {
+        width: 150px;
+        margin: 20px;
+    }
+</style>
+
+<body>
+    <h1>Currency Exchange</h1>
+
+    <label for="amount">Amount</label>
+    <input type="number" id="amount">
+    
+    <label for="fromCurrency">From Currency</label>
+    <select type='number' id="fromCurrency" onchange="convertCurrency()">
+        <option value="1">VND</option>
+        <option value="2">USD</option>
+    </select>
+
+    <label for="toCurrency">To Currency</label>
+    <select type='number' id="toCurrency" onchange="convertCurrency()">
+        <option value="2">USD</option>
+        <option value="1">VND</option>
+    </select>
+
+    <br>
+    <br>
+    <button id="convertBtn">Convert</button>
+    <br>
+    <br>
+    <span id="result"></span>
+
+    <script>
+        let amount, fromCurrency, toCurrency;
+        let amountInput = document.getElementById('amount');
+        let convertBtn = document.getElementById('convertBtn');
+        let result = document.getElementById('result');
+
+        function convertCurrency() {
+            amount = parseFloat(amountInput.value);
+            let fromCurrencyInput = document.getElementById('fromCurrency').value;
+            let toCurrencyInput = document.getElementById('toCurrency').value;
+            if (fromCurrencyInput == 1 && toCurrencyInput == 2) {
+            result.innerText = "Result: " + (amount / 23);
+        }
+            else if (fromCurrencyInput == 2 && toCurrencyInput == 1) {
+            result.innerText = "Result: " + (amount * 23);
+        }
+        }
+
+        convertBtn.addEventListener('click', function () {
+            convertCurrency();
+    });
+
+    </script>
+</body>
+
+</body>
+
+</html>
