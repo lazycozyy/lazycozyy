@@ -24,12 +24,12 @@
     <label for="fromCurrency">From Currency</label>
     <select type='number' id="fromCurrency" onchange="convertCurrency()">
         <option value="1">VND</option>
-        <option value="2">USD</option>
+        <option value="2">EUR</option>
     </select>
 
     <label for="toCurrency">To Currency</label>
     <select type='number' id="toCurrency" onchange="convertCurrency()">
-        <option value="2">USD</option>
+        <option value="2">EUR</option>
         <option value="1">VND</option>
     </select>
 
@@ -51,10 +51,10 @@
             let fromCurrencyInput = document.getElementById('fromCurrency').value;
             let toCurrencyInput = document.getElementById('toCurrency').value;
             if (fromCurrencyInput == 1 && toCurrencyInput == 2) {
-            result.innerText = "Result: " + (amount / 23);
+            result.innerText = "Result: " + (amount / 26.27);
         }
             else if (fromCurrencyInput == 2 && toCurrencyInput == 1) {
-            result.innerText = "Result: " + (amount * 23);
+            result.innerText = "Result: " + (amount * 26.27);
         }
         }
 
